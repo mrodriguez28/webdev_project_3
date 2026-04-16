@@ -51,3 +51,47 @@ if (
     updatePlace(places.cafe);
   });
 }
+
+const sliderImage = document.getElementById("slider-image");
+const sliderCaption = document.getElementById("slider-caption");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+if (sliderImage && sliderCaption && prevBtn && nextBtn) {
+  const slides = [
+    {
+      image: "media/images/img1.png",
+      alt: "Diamond rank act triangle from Valorant",
+      caption: "Diamond 1 Act Rank Triangle (approximately 6.45% of VALORANT players are ranked Diamond 1 or higher)."
+    },
+    {
+      image: "media/images/img5.png",
+      alt: "Valorant Tracker score showing an 800 tracker score",
+      caption: "800 Valorant Tracker Score (S+ Tier)"
+    }
+  ];
+
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    sliderImage.src = slides[index].image;
+    sliderImage.alt = slides[index].alt;
+    sliderCaption.textContent = slides[index].caption;
+  }
+
+  nextBtn.addEventListener("click", function () {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  });
+
+  prevBtn.addEventListener("click", function () {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+  });
+}

@@ -354,3 +354,47 @@ figure {
     font-size: 1.1rem;
   }
 }
+
+#slider-section {
+  max-width: 58rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#slider-section figure {
+  margin: 0;
+  max-width: 32rem;
+  width: 100%;
+}
+
+#slider-image {
+  max-width: 24rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#prev-btn,
+#next-btn {
+  border: none;
+  border-radius: 0.5rem;
+  background: #e6ebf1;
+  color: #1f2933;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+
+#prev-btn:hover,
+#next-btn:hover {
+  background: #d7e3f4;
+  color: #2563eb;
+}
