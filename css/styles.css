@@ -23,6 +23,9 @@ body > ul:first-of-type {
   padding: 1.25rem 0;
   margin-bottom: 2.5rem;
   box-shadow: 0 0.2rem 0.8rem rgba(47,93,80,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 body > ul:first-of-type a {
@@ -179,22 +182,36 @@ figcaption {
   font-style: italic;
 }
 
-.valorant-page > * {
-  max-width: 72rem;
-}
-
-.valorant-page img[src*="img3"],
 .valorant-page img[src*="img4"] {
-  max-width: 50rem;
+  float: left;
+  width: 44%;
+  max-width: none;
+  margin: 1rem 1rem 1rem 0;
 }
 
-.valorant-page img[src*="img1"] {
-  max-width: 24rem;
+.valorant-page h2:nth-of-type(5) {
+  float: right;
+  width: 44%;
+  clear: none;
+  margin-top: 0;
+}
+
+.valorant-page img[src*="img3"] {
+  float: right;
+  width: 44%;
+  max-width: none;
+  margin: 1rem 0 1rem 1rem;
+}
+
+.valorant-page h2:nth-of-type(6) {
+  clear: both;
+  padding-top: 1rem;
 }
 
 .valorant-page video,
 .valorant-page figure {
   max-width: 58rem;
+  clear: both;
 }
 
 @keyframes fadeUp {
@@ -217,4 +234,111 @@ img,
 video,
 figure {
   animation: fadeUp 0.6s ease;
+}
+
+.map-page {
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.map-controls,
+.map-section {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+}
+
+.map-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.map-buttons button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #e6ebf1;
+  color: #1f2933;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.map-buttons button:hover {
+  background: #d7e3f4;
+  color: #2563eb;
+}
+
+.map-section {
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+#map-frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 28rem;
+  border: 0;
+  margin: 1rem auto;
+  border-radius: 0.75rem;
+}
+
+#place-title {
+  text-align: center;
+}
+
+#place-description {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 60rem;
+  margin: 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.8rem rgba(15,23,42,0.08);
+}
+
+@media screen and (min-width: 600px) {
+  .map-page {
+    width: 92%;
+  }
+
+  .map-controls,
+  .map-section {
+    padding: 2rem;
+  }
+
+  #map-frame {
+    height: 32rem;
+  }
+
+  .map-buttons button {
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .map-page {
+    width: 85%;
+  }
+
+  #map-frame {
+    height: 36rem;
+  }
+
+  #place-description {
+    width: 75%;
+  }
 }
