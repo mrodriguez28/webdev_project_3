@@ -189,13 +189,6 @@ figcaption {
   margin: 1rem 1rem 1rem 0;
 }
 
-.valorant-page h2:nth-of-type(5) {
-  float: right;
-  width: 44%;
-  clear: none;
-  margin-top: 0;
-}
-
 .valorant-page img[src*="img3"] {
   float: right;
   width: 44%;
