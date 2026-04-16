@@ -299,11 +299,25 @@ figure {
     padding: 2rem;
   }
 
+  .map-buttons {
+    gap: 1.25rem;
+  }
+
+  .map-buttons button {
+    font-size: 1.05rem;
+    padding: 0.9rem 1.2rem;
+  }
+
   #map-frame {
     height: 32rem;
   }
 
-  .map-buttons button {
+  #place-title {
+    font-size: 1.7rem;
+  }
+
+  #place-description {
+    width: 82%;
     font-size: 1.05rem;
   }
 }
@@ -313,11 +327,30 @@ figure {
     width: 85%;
   }
 
+  .map-controls,
+  .map-section {
+    padding: 2.5rem;
+  }
+
+  .map-buttons {
+    gap: 1.5rem;
+  }
+
+  .map-buttons button {
+    font-size: 1.1rem;
+    padding: 1rem 1.4rem;
+  }
+
   #map-frame {
     height: 36rem;
   }
 
+  #place-title {
+    font-size: 2rem;
+  }
+
   #place-description {
     width: 75%;
+    font-size: 1.1rem;
   }
 }
