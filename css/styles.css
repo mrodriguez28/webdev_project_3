@@ -1,0 +1,220 @@
+body {
+  background: linear-gradient(to bottom, #f4f8f5, #e8f1ec);
+  color: #1f2933;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 0 3rem 0;
+}
+
+body > * {
+  width: 94%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+body > ul:first-of-type {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(to right, #ffffff, #f3f8f5);
+  border-bottom: 0.08rem solid #d4e2d8;
+  padding: 1.25rem 0;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(47,93,80,0.06);
+}
+
+body > ul:first-of-type a {
+  color: #2f5d50;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 0.12rem solid transparent;
+  padding-bottom: 0.2rem;
+  transition: color 0.25s ease, border-bottom 0.25s ease, transform 0.25s ease;
+}
+
+body > ul:first-of-type a:hover {
+  color: #4d7f72;
+  border-bottom: 0.12rem solid #4d7f72;
+  transform: translateY(-0.05rem);
+}
+
+h1 {
+  color: #2f5d50;
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03rem;
+}
+
+h2 {
+  color: #2f5d50;
+  font-size: 1.45rem;
+  margin-bottom: 0.75rem;
+  border-left: 0.28rem solid #4d7f72;
+  padding-left: 0.7rem;
+}
+
+h3 {
+  color: #2f5d50;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.9rem;
+  margin: 1rem auto;
+  box-shadow: 0 0.35rem 1rem rgba(15,23,42,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0.8rem 1.5rem rgba(47,93,80,0.14);
+}
+
+video {
+  display: block;
+  width: 100%;
+  max-width: 58rem;
+  height: auto;
+  border-radius: 0.9rem;
+  margin: 1rem auto;
+  box-shadow: 0 0.35rem 1rem rgba(15,23,42,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+video:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0.8rem 1.5rem rgba(47,93,80,0.14);
+}
+
+figure,
+.home-page ul:not(:first-of-type),
+.resume-page ul:not(:first-of-type),
+.valorant-page ul:not(:first-of-type),
+.home-page p:first-of-type,
+.resume-page h2 + ul,
+.resume-page h3 + p,
+.resume-page h3 + p + ul,
+.valorant-page p:first-of-type,
+.valorant-page h2 + p {
+  list-style: none;
+  background: linear-gradient(to bottom, #ffffff, #f7fbf8);
+  border: 0.08rem solid #d4e2d8;
+  border-left: 0.45rem solid #2f5d50;
+  border-radius: 1rem;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow:
+    0 0.3rem 0.8rem rgba(0,0,0,0.05),
+    0 0.8rem 1.8rem rgba(47,93,80,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+figure:hover,
+.home-page ul:not(:first-of-type):hover,
+.resume-page ul:not(:first-of-type):hover,
+.valorant-page ul:not(:first-of-type):hover,
+.home-page p:first-of-type:hover,
+.resume-page h2 + ul:hover,
+.resume-page h3 + p:hover,
+.resume-page h3 + p + ul:hover,
+.valorant-page p:first-of-type:hover,
+.valorant-page h2 + p:hover {
+  transform: translateY(-0.2rem);
+  box-shadow:
+    0 0.6rem 1.4rem rgba(0,0,0,0.06),
+    0 1.2rem 2.2rem rgba(47,93,80,0.14);
+}
+
+figcaption {
+  color: #52606d;
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.home-page li,
+.resume-page li,
+.valorant-page li {
+  margin-bottom: 0.6rem;
+}
+
+.home-page > * {
+  max-width: 68rem;
+}
+
+.home-page img {
+  max-width: 22rem;
+}
+
+.home-page p:first-of-type {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.resume-page > * {
+  max-width: 900px;
+}
+
+.resume-page h1 + p,
+.resume-page h1 + p + p {
+  text-align: center;
+  color: #52606d;
+}
+
+.resume-page h3 + p {
+  color: #52606d;
+  font-style: italic;
+}
+
+.valorant-page > * {
+  max-width: 72rem;
+}
+
+.valorant-page img[src*="img3"],
+.valorant-page img[src*="img4"] {
+  max-width: 50rem;
+}
+
+.valorant-page img[src*="img1"] {
+  max-width: 24rem;
+}
+
+.valorant-page video,
+.valorant-page figure {
+  max-width: 58rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(0.7rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+h2,
+p,
+ul:not(:first-of-type),
+img,
+video,
+figure {
+  animation: fadeUp 0.6s ease;
+}
